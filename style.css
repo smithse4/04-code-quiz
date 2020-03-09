@@ -1,14 +1,38 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 nav {
-    background-color: #fb9fa4;
+    background-color: #ff9dab;
     color: white;
 }
 
 .navbar-brand {
     color: white;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav-link {
     color: white;
+}
+
+.container {
+    background-color: #ffe9ec;
+}
+
+h1, hr, p {
+    margin: 10px;
+}
+
+#btn-start {
+    background-color: #ff9dab;
+    color: white;
+    font-weight: bold;
+    margin: 20px;
+    border: none;
+    padding: 10px;
+}
+
+#btn-start:hover {
+    background-color: #ffb6c1;
 }
