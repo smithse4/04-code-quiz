@@ -1,0 +1,14 @@
+nav {
+    background-color: #fb9fa4;
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-link {
+    color: white;
+}
