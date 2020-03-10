@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Code Quiz</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap and local styling sheets -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">Code Quiz</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">High scores</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+
+          <br>
+
+          <!-- Container with "Contact" page content -->
+        <div class="container">
+            <div id="question-container" class="hide">
+                <div id="question">
+                    Question
+                </div>
+                <div id="answer-btns">
+                    <button class="answer-btn">Answer 1</button><br>
+                    <button class="answer-btn">Answer 2</button><br>
+                    <button class="answer-btn">Answer 3</button><br>
+                    <button class="answer-btn">Answer 4</button>
+                </div>
+            </div>
+            <div class="btns">
+                <button id="btn-start" class="btn-quiz">Start</button>
+                <button id="btn-next" class="btn-quiz hide">Next</button>
+            </div>
+
+            <!-- <div class="row">
+                <div class="col-lg-12">
+                    <h1 id="welcome">Code Quiz</h1>
+                    <h3 class="questions"></h2>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Test your coding knowledge! You have 90 seonds to complete 10 multiple choice questions. Enter your initials at the end to record your score. Click the button to begin!</p>
+                </div>
+                <button id="btn-start">Start Quiz</button>
+            </div>
+
+            <div id = "after-submit">
+                <p id = "number-correct"></p>
+            </div> -->
+        
+        </div>
+
+
+
+        <!-- Bootstrap and local javascript scripts -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
