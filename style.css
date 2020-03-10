@@ -36,3 +36,7 @@ h1, hr, p {
 #btn-start:hover {
     background-color: #ffb6c1;
 }
+
+#after-submit{
+    visibility: hidden;
+}
