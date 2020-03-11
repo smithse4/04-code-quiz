@@ -22,11 +22,13 @@ nav {
     background-color: #ffe9ec;
     width: 768px;
     max-width: 80%;
+    padding: 10px;
 }
 
 h1, hr, p {
     margin: 10px;
 }
+
 
 .answer-btn {
     background-color: #014254;
