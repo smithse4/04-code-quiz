@@ -25,7 +25,7 @@
                 </li>
               </ul>
               <div class="timer my-2 my-xs-0">
-                <h5 id="time"></h5>
+                <h5 id="time">Time remaining: <span id="countdown"></span></h5>
               </form>
             </div>
           </nav>
@@ -43,14 +43,10 @@
             <!-- Quiz questions -->
             <div id="question-container" class="hide">
                 <div>
-                    <h2 id="question">question</h2>
+                    <h2 id="question-slot"></h2>
                 </div>
-                <div id="answer-btns">
-                    <button class="answer-btn">Answer 1</button><br>
-                    <button class="answer-btn">Answer 2</button><br>
-                    <button class="answer-btn">Answer 3</button><br>
-                    <button class="answer-btn">Answer 4</button>
-                </div>
+                <div id="choices"></div>
+                <div id="right-wrong" class="hide"></div>
             </div>
             <div class="btns">
                 <button id="btn-start" class="btn-quiz">Start</button>
@@ -73,5 +69,6 @@
         <!-- Local javascript scripts -->
         <script src="assets/javascript/script.js"></script>
         <script src="assets/javascript/questions.js"></script>
+        <script src="assets/javascript/highscores.js"></script>
     </body>
 </html>
