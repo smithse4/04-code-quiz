@@ -33,7 +33,7 @@ nav {
     padding: 10px;
 }
 
-h1, hr, p {
+h1, h4, hr, p {
     margin: 10px;
 }
 
@@ -75,4 +75,13 @@ h1, hr, p {
 
 #after-submit{
     visibility: hidden;
+}
+
+#question-container {
+    padding: 20px;
+}
+
+#initials-input {
+    padding:12px;
+    margin-left: 10px;
 }

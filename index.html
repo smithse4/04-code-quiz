@@ -25,7 +25,7 @@
                 </li>
               </ul>
               <div class="timer my-2 my-xs-0">
-                <h5 id="time">Time remaining: <span id="countdown"></span></h5>
+                <h5 id="time">Time remaining: <span id="countdown">60</span></h5>
               </form>
             </div>
           </nav>
@@ -43,9 +43,12 @@
             <!-- Quiz questions -->
             <div id="question-container" class="hide">
                 <div>
-                    <h2 id="question-slot"></h2>
+                    <h4 id="question-slot"></h4>
                 </div>
+                <hr>
                 <div id="choices"></div>
+                <br>
+                <hr>
                 <div id="right-wrong" class="right-wrong hide"></div>
             </div>
             <div class="btns">
@@ -53,9 +56,13 @@
             </div>
             <!-- End Quiz Form: Enter High Score -->
             <div id="end-quiz" class="hide">
-                <h2>End Quiz</h2>
-                <p id="score"></p>
-                <input id="initials-input"></input>
+                <h1>End Quiz</h1>
+                <hr>
+                <h4>Your score: <span id="score"></span></h4>
+                <br>
+                <p>Enter your intials below to record your score.</p>
+                <input id="initials-input" type="text" placeholder="Intitials" name="initials-input"></input>
+                <button id="initials-submit" class="btn-quiz">Submit score</button>
             </div>
         
         </div>

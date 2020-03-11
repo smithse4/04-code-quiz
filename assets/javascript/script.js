@@ -5,10 +5,14 @@ var questionContainerEl = document.getElementById("question-container");
 var questionEl = document.getElementById("question");
 var choicesEl = document.getElementById("choices");
 var rightWrongEl = document.getElementById("right-wrong");
+var endQuizContainerEl = document.getElementById("end-quiz")
+var initialsInput = document.getElementById("initials-input")
 // Timer
 var time = 60;
 var timerID;
 var timeEl = document.getElementById("countdown")
+// Score
+var scoreEl = document.getElementById("score")
 
 
 var currentQuestionIndex = 0
@@ -43,17 +47,6 @@ function clock() {
         quizEnd();
     }
 }
-// Timer -- need to get set to start button
-// var timeleft = 60;
-// var timer = setInterval(function(){
-// if(timeleft <= 0){
-//     clearInterval(timer);
-//     document.getElementById("time").innerHTML = "Quiz over";
-// } else {
-//     document.getElementById("time").innerHTML = "Time remaining: " + timeleft;
-// }
-// timeleft -= 1;
-// }, 1000);
 
 // Function to populate questions from our question array.
 function showQuestion() {
@@ -61,7 +54,7 @@ function showQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
     // Fill in question
     var titleEl = document.getElementById("question-slot");
-    titleEl.textContent = currentQuestion.title;
+    titleEl.textContent = currentQuestion.question;
     choicesEl.innerHTML = "";
 
     currentQuestion.choices.forEach(function(choice, i) {
@@ -82,7 +75,7 @@ function clickChoiceButton() {
     if (this.value !== questions[currentQuestionIndex].answer) {
         time -= 10;
 
-        if(time ,0) {
+        if(time < 0) {
             time = 0;
         }
         timeEl.textContent = time;
@@ -113,6 +106,8 @@ function quizEnd() {
     // Add high score function
 
     questionContainerEl.setAttribute("class", "hide");
+    endQuizContainerEl.setAttribute("class", "show");
+    scoreEl.textContent = time;
 }
 
 
