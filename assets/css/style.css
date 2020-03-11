@@ -38,17 +38,16 @@ h1, hr, p {
 }
 
 
-.answer-btn {
+.choice-btn {
     background-color: #ff9dab;
     color: white;
     margin: 5px;
     border: none;
     padding: 10px;
-    position: center;
 
 }
 
-.answer-btn:hover {
+.choice-btn:hover {
     background-color: #ffb6c1;
 }
 

@@ -4,6 +4,7 @@ var startTextEl = document.getElementById("start-text");
 var questionContainerEl = document.getElementById("question-container");
 var questionEl = document.getElementById("question");
 var choicesEl = document.getElementById("choices");
+var rightWrongEl = document.getElementById("right-wrong");
 // Timer
 var time = 60;
 var timerID;
@@ -65,7 +66,7 @@ function showQuestion() {
 
     currentQuestion.choices.forEach(function(choice, i) {
         var choiceNode = document.createElement("button");
-        choiceNode.setAttribute("class", "choice");
+        choiceNode.setAttribute("class", "choice-btn");
         choiceNode.setAttribute("value", choice);
         choiceNode.textContent = i + 1 + ". " + choice;
         // Make new choice buttons click listenter
@@ -76,8 +77,43 @@ function showQuestion() {
 }
 
 // Function to react to question choice being clicked. Depending on quiz status could move to next question or end quiz. Will also deduct time from timer if question is answered incorrectly.
+function clickChoiceButton() {
+    // check to see if user answered question right or wrong
+    if (this.value !== questions[currentQuestionIndex].answer) {
+        time -= 10;
 
+        if(time ,0) {
+            time = 0;
+        }
+        timeEl.textContent = time;
 
+        // Notify quiz taker if they answered right or wrong
+        rightWrongEl.textContent = "Wrong"
+        } else {
+        rightWrongEl.textContent = "Correct! Good job!";
+        }
+        rightWrongEl.setAttribute("class", "right-wrong");
+
+        setTimeout(function() {
+            rightWrongEl.setAttribute("class", "right-wrong hide");
+        }, 500);
+
+        currentQuestionIndex++;
+
+        if (currentQuestionIndex === questions.length) {
+            quizEnd();
+        } else {
+            showQuestion ();
+        }
+}
+
+// Function for when the quiz is finished
+function quizEnd() {
+    clearInterval(timerId);
+    // Add high score function
+
+    questionContainerEl.setAttribute("class", "hide");
+}
 
 
 // function endQuiz() {
