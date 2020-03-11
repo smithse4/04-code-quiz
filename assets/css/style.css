@@ -14,32 +14,41 @@ nav {
     font-weight: bold;
 }
 
+.navbar-brand:hover {
+    color: white;
+}
+
 .nav-link {
     color: white;
+}
+
+.nav-link:hover {
+    color: #ffb6c1;
 }
 
 .container {
     background-color: #ffe9ec;
     width: 768px;
     max-width: 80%;
+    padding: 10px;
 }
 
-h1, hr, p {
+h1, h4, hr, p {
     margin: 10px;
 }
 
-.answer-btn {
-    background-color: #014254;
+
+.choice-btn {
+    background-color: #ff9dab;
     color: white;
     margin: 5px;
     border: none;
     padding: 10px;
-    position: center;
 
 }
 
-.answer-btn:hover {
-    background-color: #014254;
+.choice-btn:hover {
+    background-color: #ffb6c1;
 }
 
 .btn-quiz {
@@ -66,4 +75,13 @@ h1, hr, p {
 
 #after-submit{
     visibility: hidden;
+}
+
+#question-container {
+    padding: 20px;
+}
+
+#initials-input {
+    padding:12px;
+    margin-left: 10px;
 }
