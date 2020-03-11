@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Code Quiz</title>
+        <title>Quiz Highscores</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Bootstrap styling sheet -->
@@ -21,50 +23,19 @@
             <div class=" navbar-collapse navbar-expand" id="navbarTogglerDemo02">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="highscore.html">High scores</a>
+                  <a class="nav-link" href="index.html">Back to Quiz</a>
                 </li>
               </ul>
-              <div class="timer my-2 my-xs-0">
-                <h5 id="time"></h5>
-              </form>
             </div>
-          </nav>
+        </nav>
 
-          <br>
+        <br>
 
-          <!-- Quiz Container -->
-        <div class="container">
-            <!-- Quiz Start -->
-            <div id="start-text" class="start-text">
-                <h1>Code Quiz</h1>
-                <hr>
-                <p>Test your coding knowledge! You have 60 seonds to complete 5 multiple choice questions. Incorrect answers will take away from your time alotted. Enter your initials at the end to record your score. Click the start button to begin!</p>
-            </div>
-            <!-- Quiz questions -->
-            <div id="question-container" class="hide">
-                <div>
-                    <h2 id="question">question</h2>
-                </div>
-                <div id="answer-btns">
-                    <button class="answer-btn">Answer 1</button><br>
-                    <button class="answer-btn">Answer 2</button><br>
-                    <button class="answer-btn">Answer 3</button><br>
-                    <button class="answer-btn">Answer 4</button>
-                </div>
-            </div>
-            <div class="btns">
-                <button id="btn-start" class="btn-quiz">Start</button>
-            </div>
-            <!-- End Quiz Form: Enter High Score -->
-            <div id="end-quiz" class="hide">
-                <h2>End Quiz</h2>
-                <p id="score"></p>
-                <input id="initials-input"></input>
-            </div>
-        
+        <!-- High Score Container -->
+        <div id="highscore-container" class="container">
+            <h1>High Scores</h1>
+            <ul id = "highscore-list"></ul>
         </div>
-
-
 
         <!-- Bootstrap javascript scripts -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
