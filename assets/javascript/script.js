@@ -5,8 +5,9 @@ var questionContainerEl = document.getElementById("question-container");
 var questionEl = document.getElementById("question");
 var choicesEl = document.getElementById("choices");
 var rightWrongEl = document.getElementById("right-wrong");
-var endQuizContainerEl = document.getElementById("end-quiz")
-var initialsInput = document.getElementById("initials-input")
+var endQuizContainerEl = document.getElementById("end-quiz");
+var initialsInput = document.getElementById("initials-input");
+var initialsSubmit = document.getElementById("initials-submit");
 // Timer
 var time = 60;
 var timerID;
@@ -19,12 +20,11 @@ var currentQuestionIndex = 0
 
 
 
-// Respond to buttons being vlicked
-startButton.addEventListener("click", startQuiz)
-// answerButton.addEventListener("click", () => {
-//     questions[i]++;
-//     setNextQuestion;
-// })
+// Initialize quiz when start button is clicked
+startButton.addEventListener("click", startQuiz);
+// Save users score to local storage when submit initials button is clicked
+// initialsSubmit.addEventListener("click", saveScore)
+
 
 // Start quiz - pressing "start" button results in opening message changing to first question and timer initializes.
 function startQuiz() {
@@ -102,38 +102,74 @@ function clickChoiceButton() {
 
 // Function for when the quiz is finished
 function quizEnd() {
+    // Stop timer
     clearInterval(timerId);
-    // Add high score function
-
+    // hide question container
     questionContainerEl.setAttribute("class", "hide");
+    // show end quiz container
     endQuizContainerEl.setAttribute("class", "show");
+    // users score equals time remaining
     scoreEl.textContent = time;
 }
 
+// Highscore local storage
 
-// function endQuiz() {
-//     timeEl.textContent = " ";
-// }
+var initialsSubmit = document.getElementById("initials-submit");
 
-// function showQuestion(questions) {
-//     questionEl.innerText = question.question;
-    // answerBtnEl.innerText = answers.answers;
-// }
+initialsSubmit.addEventListener("click", function() {
+    var initials = initialsInput.value;
 
-// for (var i=0; i < questions.length; i++) {
+    if (initials === null) {
+        alert("Must include initials");
+    } else {
+        var userScore = {
+            initials: initials,
+            score: time
+        }
+        var allScores = localStorage.getItem("allScores");
+        if (allScores === null) {
+        } else {
+            allScores = JSON.parse(allScores);
+        }
+        allScores.push(userScore);
+        var newScore = JSON.stringify(allScores);
+        localStorage.setItem("allScores");
 
-// }
+        window.location.replace("highscores.html");
+    }
+});
 
-// function nextQuestion() {
-//     showQuestion(
-//      For (var i = 0; i < questions.length; i++) { 
-//      return questions[i],
-//      })
-// }
 
-// function selectAnswer(){
 
-// }
+// initialsSubmit.addEventListener("click", function(event) {
+//     event.preventDefault();
+
+//     var userScore = {
+//         initials: initialsInput.value.trim(),
+//         score: time.value.trim(),
+//     }
+//     console.log(userScore)
+
+//     // Grab initials inputed by user
+//     // var initials = initialsInput.value;
+//     // if (initials === "") {
+//     //     displayMessage("error", "Initials cannot be blank");
+//     // }
+
+//     // var highscores = JSON.parse(window.localStorage.getItem("highscores-list"))
+
+//     // var userScore = {score: time, initials: initials};
+
+//     // highscores.push(userScore); window.localStorage.setItem("highscores-list", JSON.stringify(highscores));
+//     // // Send user to highscores page
+//     // window.location.href = "highscore.html";
+
+
+//     // }
+
+// })
+
+
 
 
 

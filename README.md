@@ -14,27 +14,33 @@ SO THAT I can gauge my progress compared to my peers
 
 ```
 GIVEN I am taking a code quiz
+```
+![Start Page](assets/screenshots/quiz-start.png)
+```
 WHEN I click the start button
 THEN a timer starts and I am presented with a question
+```
+![Question Page](assets/screenshots/question-page.png)
+```
 WHEN I answer a question
 THEN I am presented with another question
 WHEN I answer a question incorrectly
 THEN time is subtracted from the clock
 WHEN all questions are answered or the timer reaches 0
 THEN the game is over
+```
+![End Quiz Page](assets/screenshots/end-quiz.png)
+```
 WHEN the game is over
 THEN I can save my initials and score
 ```
 
 
 
-### Review
+## Links
 
-You are required to submit the following for review:
+Linked Github repository and deployed application for reference:
 
-* The URL of the functional, deployed application.
+[Github repository](https://github.com/smithse4/04-code-quiz)
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+[Deployed application](https://smithse4.github.io/04-code-quiz/)
