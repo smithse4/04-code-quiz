@@ -14,32 +14,27 @@ var timerID;
 var timeEl = document.getElementById("countdown")
 // Score
 var scoreEl = document.getElementById("score")
-
-
+// Question Index starts at 0
 var currentQuestionIndex = 0
-
-
 
 // Initialize quiz when start button is clicked
 startButton.addEventListener("click", startQuiz);
-// Save users score to local storage when submit initials button is clicked
-// initialsSubmit.addEventListener("click", saveScore)
-
 
 // Start quiz - pressing "start" button results in opening message changing to first question and timer initializes.
 function startQuiz() {
+    // Hide start screen elements and unhide question contatiner
     startButton.classList.add("hide");
     startTextEl.classList.add("hide");
     questionContainerEl.classList.remove("hide");
     // Initialize countdown timer
     timerId = setInterval(clock, 1000);
     timeEl.textContent = time;
-    // Move from start view to the first question
+    //Populate first question
     showQuestion();
 }
 
 function clock() {
-    // track time
+    // Countdown clock
     time--;
     timeEl.textContent = time;
     // If user runs out of time before finishing quix, end quiz
@@ -52,11 +47,11 @@ function clock() {
 function showQuestion() {
     // Find question from array of questions
     var currentQuestion = questions[currentQuestionIndex];
-    // Fill in question
+    // Fill in question and answer choices
     var titleEl = document.getElementById("question-slot");
     titleEl.textContent = currentQuestion.question;
     choicesEl.innerHTML = "";
-
+    // Run through questions
     currentQuestion.choices.forEach(function(choice, i) {
         var choiceNode = document.createElement("button");
         choiceNode.setAttribute("class", "choice-btn");
@@ -112,64 +107,35 @@ function quizEnd() {
     scoreEl.textContent = time;
 }
 
-// Highscore local storage
+// Highscore local storage - couldn't get this to work. Commented out, so I can come back to it.
 
-var initialsSubmit = document.getElementById("initials-submit");
+// var initialsSubmit = document.getElementById("initials-submit");
+// var initials = document.getElementById(initialsInput).value;
+// var finalScore = {
+//     initials: initials,
+//     score: time
+// }
+// Console.log(finalScore);
+// listen to submit startButton
+// to send initials and score to local Storage
+// and change the page to the high scores page
 
-initialsSubmit.addEventListener("click", function() {
-    var initials = initialsInput.value;
+// initialsSubmit.addEventListener("click", submitScore);
 
-    if (initials === null) {
-        alert("Must include initials");
-    } else {
-        var userScore = {
-            initials: initials,
-            score: time
-        }
-        var allScores = localStorage.getItem("allScores");
-        if (allScores === null) {
-        } else {
-            allScores = JSON.parse(allScores);
-        }
-        allScores.push(userScore);
-        var newScore = JSON.stringify(allScores);
-        localStorage.setItem("allScores");
+//     function submitScore() {
+//         var initials = initialsInput.value;
 
-        window.location.replace("highscores.html");
-    }
-});
+//         window.location.replace("highscore.html");
 
-
-
-// initialsSubmit.addEventListener("click", function(event) {
-//     event.preventDefault();
-
-//     var userScore = {
-//         initials: initialsInput.value.trim(),
-//         score: time.value.trim(),
+//         localStorage.setItem({
+//             intitals: "initials",
+//             score: time
+//         });
 //     }
-//     console.log(userScore)
-
-//     // Grab initials inputed by user
-//     // var initials = initialsInput.value;
-//     // if (initials === "") {
-//     //     displayMessage("error", "Initials cannot be blank");
-//     // }
-
-//     // var highscores = JSON.parse(window.localStorage.getItem("highscores-list"))
-
-//     // var userScore = {score: time, initials: initials};
-
-//     // highscores.push(userScore); window.localStorage.setItem("highscores-list", JSON.stringify(highscores));
-//     // // Send user to highscores page
-//     // window.location.href = "highscore.html";
 
 
-//     // }
 
-// })
-
-
+ 
 
 
 
