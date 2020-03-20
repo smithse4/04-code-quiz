@@ -17,12 +17,12 @@ SO THAT I can gauge my progress compared to my peers
 ```
 GIVEN I am taking a code quiz
 ```
-![Start Page](assets/screenshots/quiz-start.png)
+![Start Page](assets/Screenshots/quiz-start.png)
 ```
 WHEN I click the start button
 THEN a timer starts and I am presented with a question
 ```
-![Question Page](assets/screenshots/question-page.png)
+![Question Page](assets/Screenshots/question-page.png)
 ```
 WHEN I answer a question
 THEN I am presented with another question
@@ -31,11 +31,10 @@ THEN time is subtracted from the clock
 WHEN all questions are answered or the timer reaches 0
 THEN the game is over
 ```
-![End Quiz Page](assets/screenshots/end-quiz.png)
+![End Quiz Page](assets/Screenshots/end-quiz.png)
 ```
 WHEN the game is over
 THEN I can save my initials and score
-    More to come on this topic when I get it to work correctly.
 ```
 
 
